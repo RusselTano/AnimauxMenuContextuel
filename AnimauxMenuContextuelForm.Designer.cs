@@ -97,6 +97,7 @@
             this.Controls.Add(this.nomAnimalLabel);
             this.Controls.Add(this.animauxListBox);
             this.Name = "AnimauxMenuContextuelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Animaux et menu contextuel";
             this.ResumeLayout(false);
             this.PerformLayout();
