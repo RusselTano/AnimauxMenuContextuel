@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace AnimauxMenuContextuel
 {
-    public partial class Form1 : Form
+    public partial class AnimauxMenuContextuelForm : Form
     {
-        public Form1()
+        public AnimauxMenuContextuelForm()
         {
             InitializeComponent();
         }
