@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.animauxListBox = new System.Windows.Forms.ListBox();
             this.nomAnimalLabel = new System.Windows.Forms.Label();
             this.nomAnimalTextBox = new System.Windows.Forms.TextBox();
             this.retrouverButton = new System.Windows.Forms.Button();
             this.InsererButton = new System.Windows.Forms.Button();
+            this.animauxContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animauxContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // animauxListBox
             // 
+            this.animauxListBox.ContextMenuStrip = this.animauxContextMenuStrip;
             this.animauxListBox.FormattingEnabled = true;
             this.animauxListBox.ItemHeight = 16;
             this.animauxListBox.Items.AddRange(new object[] {
@@ -76,6 +81,7 @@
             this.retrouverButton.TabIndex = 3;
             this.retrouverButton.Text = "Retrouver";
             this.retrouverButton.UseVisualStyleBackColor = true;
+            this.retrouverButton.Click += new System.EventHandler(this.retrouverButton_Click);
             // 
             // InsererButton
             // 
@@ -85,6 +91,23 @@
             this.InsererButton.TabIndex = 4;
             this.InsererButton.Text = "Inserer";
             this.InsererButton.UseVisualStyleBackColor = true;
+            this.InsererButton.Click += new System.EventHandler(this.InsererButton_Click);
+            // 
+            // animauxContextMenuStrip
+            // 
+            this.animauxContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.animauxContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.supprimerToolStripMenuItem});
+            this.animauxContextMenuStrip.Name = "animauxContextMenuStrip";
+            this.animauxContextMenuStrip.Size = new System.Drawing.Size(146, 28);
+            this.animauxContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.animauxContextMenuStrip_Opening);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.supprimerToolStripMenuItem.Text = "supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // AnimauxMenuContextuelForm
             // 
@@ -99,6 +122,8 @@
             this.Name = "AnimauxMenuContextuelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Animaux et menu contextuel";
+            this.Load += new System.EventHandler(this.AnimauxMenuContextuelForm_Load);
+            this.animauxContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +136,8 @@
         private System.Windows.Forms.TextBox nomAnimalTextBox;
         private System.Windows.Forms.Button retrouverButton;
         private System.Windows.Forms.Button InsererButton;
+        private System.Windows.Forms.ContextMenuStrip animauxContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
     }
 }
 
